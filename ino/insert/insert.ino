@@ -4,8 +4,10 @@
 #include <Process.h>
 
 YunServer server;
+
 int pirPin = 13;
-int minSecsBetweenEmails = 60; // 1 min
+int minbetweenSQLinserts = 1; // min between SQL Inserts
+int msbetweenSQLinserts = minbetweenSQLinserts * 60 * 1000; //convert min to ms
 
 #define beta 4090 //the beta of the thermistor
 #define resistance 10 //the value (kilo-ohms) of the pull-down resistor
@@ -29,6 +31,6 @@ void loop()
         Bridge.put("A0", String(tempF));
         Process p;
         p.runShellCommand("python /usr/lib/python2.7/bridge/bee_insert.py");
-        delay(900000);
+        delay(msbetweenSQLinserts);
 }
 

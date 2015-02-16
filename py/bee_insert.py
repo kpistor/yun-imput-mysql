@@ -1,5 +1,5 @@
-from ./__future__ import print_function
-from ./datetime import date, datetime, timedelta
+from __future__ import print_function
+from datetime import date, datetime, timedelta
 from config import *
 import mysql.connector
 import sys
@@ -31,10 +31,10 @@ add_sesnor = ("INSERT INTO sensor1 "
 
 data_sensor = (time, temp, dig)
 
-# Insert new employee
+#Insert data
 cursor.execute(add_sesnor, data_sensor)
 
-# Make sure data is committed to the database
+#Commit
 cnx.commit()
 
 cursor.close()
