@@ -1,0 +1,7 @@
+USER ='beehive'
+PASS = 'k62KP4ZonbH6CtO0'
+HOST = 'arduino.cjjfszhape7x.us-west-2.rds.amazonaws.com'
+DBN = 'arduino1'
+GUSER = 'kyle.pistor@gmail.com'
+GPASS = 'tri31.93'
+GTO = 'kyle.pistor@gmail.com'
